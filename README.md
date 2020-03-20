@@ -78,6 +78,7 @@ An app that allows users to upload images and make thier own story from that one
     * Stream
 ## Wireframes
 https://www.figma.com/file/hh5T3gI96g9CTW45m2tjcv/Interpo?node-id=0%3A1
+![enter image description here](https://raw.githubusercontent.com/Interprio/Interprio/master/CaptureInterprio.PNG)
 
 ### [BONUS] Digital Wireframes & Mockups
 
