@@ -99,19 +99,13 @@ https://www.figma.com/file/hh5T3gI96g9CTW45m2tjcv/Interpo?node-id=0%3A1
 **Book**
 | Property | Type | Description |
 | --------   | --------    | -------- |
-| ThreadID       | String        |  An ID that indentifies the book (thread).    |
-| UserID       | String        | An ID that identifies the user.     |
-| Picture       | File        | Cover picture of a Book. (thread)     |
-| Likes       | Number        | Number of upvotes on a comment.     |
-| Dislikes       | Number        | Number of downvotes on a comment.    |
-| Report       | Number        | User can report bad post.    |
-| Comment       | String        | A string that is posted inside of a book.     |
+| BookID       | String        |  An ID that indentifies the book (thread).    |
 | Date_Created       | Date Time        | Date and time the book was created.     |
 
 **Posts**
 | Property | Type | Description |
 | --------   | --------    | -------- |
-| ThreadID      | String        | An ID that identifies the book. (Thread)     |
+| BookID      | String        | An ID that identifies the book. (Thread)     |
 | PostID       | String      | Identifies the post object.     |
 | UserID       | String       | Identifies who made the post.    |
 | Comment       | String       | Comment add to post.    |
