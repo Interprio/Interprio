@@ -139,6 +139,43 @@ https://www.figma.com/file/hh5T3gI96g9CTW45m2tjcv/Interpo?node-id=0%3A1
 | TypeOfDislikes      | String        | Identifies where the dislike was made.    |
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+- **Login Screen**
+    (Read/GET)Validate Username and Password.
+        let query = PFQuery(className:"User")
+        query.whereKey("username", equalTo: currentUser)
+        
+- **Register**
+    (Create/POST)Creates a user account.
+        let query = PFQuery(classname: "Users")
+        query.whereKey("userID", notEqualTo: usernametext)
+        query. findObjectsInBackground { (users: [PFObject]?, error:         Error?) in
+           if let error = error { 
+              print(error.localizedDescription)
+           } else if let posts = posts {
+              print("Successfully retrieved \(posts.count) posts.")
+              // TODO: Do something with posts...
+           }
+        }
+    
+- **Profile**
+    (Read/Get) Query logged in user object.
+        let query = PFQuery(classname: "User")
+        query.whereKey("userID", EqualTo: currentUser)
+        
+    (Update/PUT) Update user profile image.
+    
+    (Update/PUT) Update user profile likes/dislikes.
+    
+- **Stream**
+    (Read/GET) Query all submissions and display current submissions.
+    
+- **Post Collection**
+    (Read/GET)Query All current posts for the book.
+    
+- **Creation**
+    (Create/POST) Create a new Creation object.
+    
+- **Submit Cover**
+    (Read/GET) Create a new Cover object.
+    
