@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304CCF24CB81F515096D1554 /* Pods_Interprio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15CA704AEAD242BC50E6741 /* Pods_Interprio.framework */; };
 		4207544624311B3800C233E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207544524311B3800C233E7 /* AppDelegate.swift */; };
 		4207544824311B3800C233E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207544724311B3800C233E7 /* SceneDelegate.swift */; };
 		4207544A24311B3800C233E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207544924311B3800C233E7 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		4207545224311B4100C233E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4207545024311B4100C233E7 /* LaunchScreen.storyboard */; };
 		4207545D24311B4100C233E7 /* InterprioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207545C24311B4100C233E7 /* InterprioTests.swift */; };
 		4207546824311B4100C233E7 /* InterprioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4207546724311B4100C233E7 /* InterprioUITests.swift */; };
+		50EC0F7F96B565CA5D60C622 /* Pods_InterprioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F216A0DE775F019D9B9EB4 /* Pods_InterprioTests.framework */; };
+		5BD495F7CAD887BD4CD4A0E9 /* Pods_Interprio_InterprioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED68B67699F3874B5A618493 /* Pods_Interprio_InterprioUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0608B99AEF73877B023B3F /* Pods-Interprio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interprio.release.xcconfig"; path = "Target Support Files/Pods-Interprio/Pods-Interprio.release.xcconfig"; sourceTree = "<group>"; };
+		1449B636903DB44274E4CF9B /* Pods-Interprio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interprio.debug.xcconfig"; path = "Target Support Files/Pods-Interprio/Pods-Interprio.debug.xcconfig"; sourceTree = "<group>"; };
 		4207544224311B3800C233E7 /* Interprio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interprio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4207544524311B3800C233E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4207544724311B3800C233E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		4207546324311B4100C233E7 /* InterprioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterprioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4207546724311B4100C233E7 /* InterprioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterprioUITests.swift; sourceTree = "<group>"; };
 		4207546924311B4100C233E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F216A0DE775F019D9B9EB4 /* Pods_InterprioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterprioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		815DA1635B8DB36EC2F66C3C /* Pods-Interprio-InterprioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interprio-InterprioUITests.release.xcconfig"; path = "Target Support Files/Pods-Interprio-InterprioUITests/Pods-Interprio-InterprioUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C15CA704AEAD242BC50E6741 /* Pods_Interprio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interprio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA14D3E06FA765CDEED34EE8 /* Pods-Interprio-InterprioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interprio-InterprioUITests.debug.xcconfig"; path = "Target Support Files/Pods-Interprio-InterprioUITests/Pods-Interprio-InterprioUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC322D94C8D27EAACF1A587A /* Pods-InterprioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterprioTests.release.xcconfig"; path = "Target Support Files/Pods-InterprioTests/Pods-InterprioTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED68B67699F3874B5A618493 /* Pods_Interprio_InterprioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interprio_InterprioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4779FEB675D30186B19F471 /* Pods-InterprioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterprioTests.debug.xcconfig"; path = "Target Support Files/Pods-InterprioTests/Pods-InterprioTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304CCF24CB81F515096D1554 /* Pods_Interprio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50EC0F7F96B565CA5D60C622 /* Pods_InterprioTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD495F7CAD887BD4CD4A0E9 /* Pods_Interprio_InterprioUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10DC78DD36914E2D2F626E74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1449B636903DB44274E4CF9B /* Pods-Interprio.debug.xcconfig */,
+				0D0608B99AEF73877B023B3F /* Pods-Interprio.release.xcconfig */,
+				EA14D3E06FA765CDEED34EE8 /* Pods-Interprio-InterprioUITests.debug.xcconfig */,
+				815DA1635B8DB36EC2F66C3C /* Pods-Interprio-InterprioUITests.release.xcconfig */,
+				F4779FEB675D30186B19F471 /* Pods-InterprioTests.debug.xcconfig */,
+				EC322D94C8D27EAACF1A587A /* Pods-InterprioTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4207543924311B3700C233E7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				4207545B24311B4100C233E7 /* InterprioTests */,
 				4207546624311B4100C233E7 /* InterprioUITests */,
 				4207544324311B3800C233E7 /* Products */,
+				10DC78DD36914E2D2F626E74 /* Pods */,
+				87C2D482498FFE052BC56DF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +159,16 @@
 			path = InterprioUITests;
 			sourceTree = "<group>";
 		};
+		87C2D482498FFE052BC56DF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C15CA704AEAD242BC50E6741 /* Pods_Interprio.framework */,
+				ED68B67699F3874B5A618493 /* Pods_Interprio_InterprioUITests.framework */,
+				69F216A0DE775F019D9B9EB4 /* Pods_InterprioTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4207546C24311B4100C233E7 /* Build configuration list for PBXNativeTarget "Interprio" */;
 			buildPhases = (
+				E4FFC9A5B2778AEC55FB35D8 /* [CP] Check Pods Manifest.lock */,
 				4207543E24311B3700C233E7 /* Sources */,
 				4207543F24311B3700C233E7 /* Frameworks */,
 				4207544024311B3700C233E7 /* Resources */,
+				1822DA9EA8BBFD28ADD36F23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4207546F24311B4100C233E7 /* Build configuration list for PBXNativeTarget "InterprioTests" */;
 			buildPhases = (
+				82E1474B86ADF55492CFCAD8 /* [CP] Check Pods Manifest.lock */,
 				4207545424311B4100C233E7 /* Sources */,
 				4207545524311B4100C233E7 /* Frameworks */,
 				4207545624311B4100C233E7 /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4207547224311B4100C233E7 /* Build configuration list for PBXNativeTarget "InterprioUITests" */;
 			buildPhases = (
+				F92951743A47E3AB17ACC6D4 /* [CP] Check Pods Manifest.lock */,
 				4207545F24311B4100C233E7 /* Sources */,
 				4207546024311B4100C233E7 /* Frameworks */,
 				4207546124311B4100C233E7 /* Resources */,
+				B3BF5F500F2BDE8EF42DD21B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +299,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1822DA9EA8BBFD28ADD36F23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Interprio/Pods-Interprio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Interprio/Pods-Interprio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Interprio/Pods-Interprio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E1474B86ADF55492CFCAD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InterprioTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3BF5F500F2BDE8EF42DD21B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Interprio-InterprioUITests/Pods-Interprio-InterprioUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Interprio-InterprioUITests/Pods-Interprio-InterprioUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Interprio-InterprioUITests/Pods-Interprio-InterprioUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4FFC9A5B2778AEC55FB35D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Interprio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F92951743A47E3AB17ACC6D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Interprio-InterprioUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4207543E24311B3700C233E7 /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		4207546D24311B4100C233E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1449B636903DB44274E4CF9B /* Pods-Interprio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +600,7 @@
 		};
 		4207546E24311B4100C233E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D0608B99AEF73877B023B3F /* Pods-Interprio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +619,7 @@
 		};
 		4207547024311B4100C233E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4779FEB675D30186B19F471 /* Pods-InterprioTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +642,7 @@
 		};
 		4207547124311B4100C233E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC322D94C8D27EAACF1A587A /* Pods-InterprioTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +665,7 @@
 		};
 		4207547324311B4100C233E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA14D3E06FA765CDEED34EE8 /* Pods-Interprio-InterprioUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +686,7 @@
 		};
 		4207547424311B4100C233E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 815DA1635B8DB36EC2F66C3C /* Pods-Interprio-InterprioUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
