@@ -1,4 +1,3 @@
-# Interprio
 Group Project - README Template
 ===
 
@@ -12,13 +11,13 @@ Group Project - README Template
 
 ## Overview
 ### Description
-An app that allows users to upload images and make thier own story from that one image.
+An app that allows users to upload images and make their own story from that one image.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category: Art/Creativity**
 - **Mobile: IOS**
-- **Story: Allows users to upload images and create thier stories from that one image**
+- **Story: Allows users to upload images and create their stories from that one image**
 - **Market: Anyone who enjoys character art and stories**
 - **Habit: Users can enjoy stories**
 - **Scope: Posting character art and making story comments **
@@ -53,7 +52,7 @@ An app that allows users to upload images and make thier own story from that one
 * Creation
     * User can upload an image
 * Profile
-    * User can showcase thier uploads
+    * User can showcase their uploads
 
 
 ### 3. Navigation
@@ -78,19 +77,20 @@ An app that allows users to upload images and make thier own story from that one
     * Stream
 ## Wireframes
 https://www.figma.com/file/hh5T3gI96g9CTW45m2tjcv/Interpo?node-id=0%3A1
-![enter image description here](https://raw.githubusercontent.com/Interprio/Interprio/master/CaptureInterprio.PNG)
 
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
+
 ### Models
+
 **User**
 | Property | Type | Description |
 | --------   | --------    | -------- |
-| UserID      | String       | An ID that identifies user.|
+| UserID  | String       | An ID that identifies user.|
 | Email | String | The users email.|
 |Password | String | string that will allow user to sign in|
 |Profile_Picture | File | Users profile picture.|
@@ -164,18 +164,31 @@ https://www.figma.com/file/hh5T3gI96g9CTW45m2tjcv/Interpo?node-id=0%3A1
         query.whereKey("userID", EqualTo: currentUser)
         
     (Update/PUT) Update user profile image.
-    
+    Query logged in user object.
+        let query = PFQuery(classname: "User")
+        query.whereKey("userPic", EqualTo: currentUserPic)
+        
     (Update/PUT) Update user profile likes/dislikes.
-    
+    Query logged in user object.
+        let query = PFQuery(classname: "User")
+        query.whereKey("likes", EqualTo: userLikes)
+        let query = PFQuery(classname: "User")
+        query.whereKey("dislikes", EqualTo: userDislikes)
 - **Stream**
     (Read/GET) Query all submissions and display current submissions.
-    
+    let query = PFQuery(classname: "stream")
+    query.whereKey("streamPosts", EqualTo: streamPosts)
 - **Post Collection**
     (Read/GET)Query All current posts for the book.
-    
+       let query = PFQuery(classname: "book")
+    query.whereKey("bookposts", EqualTo: streamPosts)
 - **Creation**
     (Create/POST) Create a new Creation object.
-    
+    let query = PFQuery(classname: "user")
+    query.whereKey("newPost", EqualTo: streamPosts)
 - **Submit Cover**
     (Read/GET) Create a new Cover object.
-    
+    (Create/POST) Create a new Creation object.
+    let query = PFQuery(classname: "user")
+    query.whereKey("newCreation", EqualTo: creationPosts)
+- [Create basic snippets for each Parse network request]
