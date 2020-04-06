@@ -7,14 +7,43 @@
 //
 
 import UIKit
+import AlamofireImage
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
 
+    
+      
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        //customize layout
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 8
+        layout .minimumInteritemSpacing = 4
+         let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 2
+               layout.itemSize = CGSize(width: width, height: width * 2 / 2)
         // Do any additional setup after loading the view.
     }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookCell", for: indexPath) as! BookCollectionViewCell
+//        cell.backgroundColor = UIColor.cyan
+        cell.bookCellImage.image = UIImage(named: "interprio_logo")
+        return cell
+    }
+    
+    
     
 
     /*
