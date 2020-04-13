@@ -159,7 +159,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Login View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,7 +297,11 @@
                         <viewLayoutGuide key="safeArea" id="XKi-lF-3O0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Interprio" id="zt4-3g-W3F">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="p5i-nc-DkK"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="p5i-nc-DkK">
+                            <connections>
+                                <action selector="logout:" destination="EuQ-nM-cLv" id="eOj-IP-kDY"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="aO5-Fb-h5S"/>
                     </navigationItem>
                     <connections>
