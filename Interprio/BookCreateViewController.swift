@@ -8,15 +8,34 @@
 
 import UIKit
 
-class BookCreateViewController: UIViewController {
-
+class BookCreateViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBOutlet weak var bookTitleTextField: UITextField!
+    @IBOutlet weak var genrePickerView: UIPickerView!
+    
+    var pickerData: [String] = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.genrePickerView.delegate = self
+        self.genrePickerView.dataSource = self
+        //Temporary hard coded data for genres.
+        pickerData = ["Mangna", "Science Fiction", "Fantasy", "Sports", "Mystery", "Item 6"]
         // Do any additional setup after loading the view.
     }
     
-
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
     /*
     // MARK: - Navigation
 
