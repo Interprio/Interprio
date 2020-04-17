@@ -44,10 +44,9 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
-    
     @IBAction func toProfile(_ sender: Any) {
-        
-    }
+        performSegue(withIdentifier: "profileSegue", sender: self)    }
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
