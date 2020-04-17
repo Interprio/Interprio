@@ -109,7 +109,7 @@
             <objects>
                 <viewController id="aq5-Is-0BF" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d9l-0u-g04" userLabel="Profile View">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-vX-jsp" customClass="Username">
@@ -257,6 +257,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Submit a Book"/>
+                                <connections>
+                                    <action selector="onSubmitBook:" destination="EuQ-nM-cLv" eventType="touchUpInside" id="3jE-GQ-tj7"/>
+                                    <segue destination="dnP-YX-Rxj" kind="presentation" identifier="submitBookSegue" id="LIG-ai-BYR"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yug-ZX-qAs">
                                 <rect key="frame" x="0.0" y="44" width="375" height="532"/>
@@ -311,7 +315,7 @@
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="toProfile:" destination="EuQ-nM-cLv" id="EP3-0E-a3Y"/>
-                                <segue destination="aq5-Is-0BF" kind="presentation" identifier="profileSegue" id="BAt-de-a1W"/>
+                                <segue destination="aq5-Is-0BF" kind="presentation" identifier="profileSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="BAt-de-a1W"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -385,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfk-ka-oGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3608.8000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2513" y="-1425"/>
         </scene>
         <!--Creation View Controller-->
         <scene sceneID="ZXN-oz-z6b">
@@ -429,7 +433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOs-mN-Mw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3608.8000000000002" y="811.84407796101959"/>
+            <point key="canvasLocation" x="3562" y="-1425"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tna-52-Xz3">
@@ -455,7 +459,7 @@
             <objects>
                 <viewController id="dnP-YX-Rxj" userLabel="Book Submission View Controller" customClass="BookCreateViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgw-e7-LD4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HWM-Qg-JKe">
@@ -508,7 +512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jt3-9e-ViL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648.8" y="819.94002998500753"/>
+            <point key="canvasLocation" x="929" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qYx-4x-7BL">
@@ -526,7 +530,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wok-xw-F2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2670" y="139"/>
+            <point key="canvasLocation" x="1457" y="-1425"/>
         </scene>
     </scenes>
     <resources>

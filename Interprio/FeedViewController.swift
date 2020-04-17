@@ -45,7 +45,14 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     @IBAction func toProfile(_ sender: Any) {
-        performSegue(withIdentifier: "profileSegue", sender: self)    }
+        performSegue(withIdentifier: "profileSegue", sender: self)
+        
+    }
+    
+    
+    @IBAction func onSubmitBook(_ sender: Any) {
+        performSegue(withIdentifier: "submitBookSegue", sender: self)
+    }
     
     
     
