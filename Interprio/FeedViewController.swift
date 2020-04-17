@@ -43,6 +43,13 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         delegate.window?.rootViewController = loginViewController
         
     }
+    
+    
+    @IBAction func toProfile(_ sender: Any) {
+        
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
