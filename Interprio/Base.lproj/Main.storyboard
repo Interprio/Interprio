@@ -442,17 +442,21 @@
             </objects>
             <point key="canvasLocation" x="-58" y="-654"/>
         </scene>
-        <!--Book Submission View Controller-->
+        <!--Book Create View Controller-->
         <scene sceneID="hvD-C2-Hb8">
             <objects>
-                <viewController id="dnP-YX-Rxj" userLabel="Book Submission View Controller" customClass="BookCreateViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dnP-YX-Rxj" customClass="BookCreateViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgw-e7-LD4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HWM-Qg-JKe">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HWM-Qg-JKe">
                                 <rect key="frame" x="16" y="20" width="343" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dpD-Bu-4wL" appends="YES" id="iGJ-Dc-wNG"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVV-fp-zX2">
                                 <rect key="frame" x="16" y="323" width="87" height="24"/>
@@ -492,6 +496,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="dnP-YX-Rxj" eventType="touchUpInside" id="kLa-cT-CP6"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-M9-iSU">
                                 <rect key="frame" x="16" y="395" width="343" height="69"/>
@@ -503,10 +510,17 @@
                     </view>
                     <connections>
                         <outlet property="bookTitleTextField" destination="z1a-Iu-XXC" id="fXQ-kv-ugX"/>
+                        <outlet property="cameraImageView" destination="HWM-Qg-JKe" id="23e-Qb-OU6"/>
+                        <outlet property="captionTextField" destination="Pwe-Pf-qA6" id="wlQ-Sw-gEH"/>
                         <outlet property="genrePickerView" destination="hxU-M9-iSU" id="ku9-km-3v6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jt3-9e-ViL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dpD-Bu-4wL">
+                    <connections>
+                        <action selector="onCameraButton:" destination="dnP-YX-Rxj" id="STH-jx-Kii"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="119.1904047976012"/>
         </scene>
