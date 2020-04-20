@@ -8,6 +8,7 @@ target 'Interprio' do
   # Pods for Interprio
 	pod "Parse"
 	pod "AlamofireImage"
+    	pod 'WeScan', '>= 0.9'
 
   target 'InterprioTests' do
     inherit! :search_paths

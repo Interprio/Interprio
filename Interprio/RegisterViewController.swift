@@ -57,7 +57,6 @@ class RegisterViewController: UIViewController {
         let image = UIImage(named: "interprio_logo")
         let imageData = (image!.pngData())
         let imageFile = PFFileObject(name: "profileLogo.png", data: imageData!)
-        let userPhoto = PFObject(className: "User")
         user["profilePicture"] = imageFile
         
         //sign up
