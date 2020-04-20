@@ -43,6 +43,19 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         delegate.window?.rootViewController = loginViewController
         
     }
+    
+    @IBAction func toProfile(_ sender: Any) {
+        performSegue(withIdentifier: "profileSegue", sender: self)
+        
+    }
+    
+    
+    @IBAction func onSubmitBook(_ sender: Any) {
+        performSegue(withIdentifier: "submitBookSegue", sender: self)
+    }
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
