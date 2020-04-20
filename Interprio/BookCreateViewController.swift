@@ -94,7 +94,6 @@ class BookCreateViewController: UIViewController, UIPickerViewDelegate, UIPicker
             let book = PFObject(className: "Books")
             book["createdBy"] = PFUser.current()
             book["title"] = bookTitle
-            book["caption"] = caption
             book["genre"] = genre
             
             //set image
@@ -107,11 +106,22 @@ class BookCreateViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 if(success) {
                     let page = PFObject(className: "Pages")
                     //set book
-                    //let bookQuery = PFQuery
+                    page["book"] = PFObject(withoutDataWithClassName: "Books", objectId: book.objectId)
                     //set page #
+                    page["pageNumber"] = 1
                     //set art
+                    page["image"] = imageFile
                     //set caption
+                    page["caption"] = caption
                     //set user
+                    page["createdBy"] = PFUser.current()
+                    page.saveInBackground { (success, error) in
+                        if(success) {
+                            print("page created")
+                        } else {
+                            print("Error: \(error?.localizedDescription)")
+                        }
+                    }
                     self.dismiss(animated: true, completion: nil)
                 } else {
                     print("Error: \(error?.localizedDescription)")
