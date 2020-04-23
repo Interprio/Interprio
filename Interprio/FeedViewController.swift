@@ -15,7 +15,8 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
       
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var books = [PFObject]()
+    var numberOfPosts: Int!
     
     
     override func viewDidLoad() {
@@ -31,6 +32,24 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
          let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 2
                layout.itemSize = CGSize(width: width, height: width * 2 / 2)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        numberOfPosts = 10
+        loadPosts()
+    }
+    
+    func loadPosts(){
+        let query = PFQuery(className: "Books")
+        query.includeKeys(["coverImage"])
+        query.limit = numberOfPosts
+        query.findObjectsInBackground { (books, error) in
+            if (books != nil){
+                self.books = books!
+                self.collectionView.reloadData()
+            }
+        }
     }
 
     @IBAction func logout(_ sender: Any) {
@@ -57,13 +76,19 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return books.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let book = books[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookCell", for: indexPath) as! BookCollectionViewCell
-//        cell.backgroundColor = UIColor.cyan
-        cell.bookCellImage.image = UIImage(named: "interprio_logo")
+        print(books[indexPath.row])
+        let imageFile = book["coverImage"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        cell.bookCellImage.af_setImage(withURL: url)
         return cell
     }
     

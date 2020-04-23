@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -280,10 +280,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-oa-rsp">
-                                                    <rect key="frame" x="36.5" y="20.5" width="107" height="99.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="140"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="99.5" id="Mp1-jE-QHE"/>
-                                                        <constraint firstAttribute="width" constant="107" id="f4a-ez-OoE"/>
+                                                        <constraint firstAttribute="height" constant="140" id="Mp1-jE-QHE"/>
+                                                        <constraint firstAttribute="width" constant="180" id="f4a-ez-OoE"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -324,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LA4-L4-YYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="-654"/>
+            <point key="canvasLocation" x="928.79999999999995" y="-654.42278860569718"/>
         </scene>
         <!--Book View Controller-->
         <scene sceneID="DKz-yK-Ivm">
@@ -554,15 +554,15 @@
             <point key="canvasLocation" x="1457" y="-1425"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Interprio_Login_Logo" width="200" height="200"/>
-        <image name="arrowtriangle.down" catalog="system" width="64" height="62"/>
-        <image name="arrowtriangle.up" catalog="system" width="64" height="62"/>
-        <image name="camera" catalog="system" width="64" height="48"/>
-        <image name="homeButton_tab" width="25" height="25"/>
-        <image name="profile_tab" width="25" height="30"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8DB-lK-8pJ"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Interprio_Login_Logo" width="200" height="200"/>
+        <image name="arrowtriangle.down" catalog="system" width="128" height="124"/>
+        <image name="arrowtriangle.up" catalog="system" width="128" height="124"/>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="homeButton_tab" width="25" height="25"/>
+        <image name="profile_tab" width="25" height="30"/>
+    </resources>
 </document>
