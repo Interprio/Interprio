@@ -201,7 +201,7 @@ https://www.figma.com/file/hh5T3gI96g9CTW45m2tjcv/Interpo?node-id=0%3A1
 
 **Finished Database**
 
-![UX](demo/Database.gif)
+![UX](Database.gif)
 
 **Finished Logic**
 
