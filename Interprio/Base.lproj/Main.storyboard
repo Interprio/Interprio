@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8K-OK-eIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="-654"/>
+            <point key="canvasLocation" x="1777" y="-842"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -296,6 +296,7 @@
                                         <size key="customSize" width="180" height="140"/>
                                         <connections>
                                             <outlet property="bookCellImage" destination="Fg0-oa-rsp" id="wIk-ht-0Kx"/>
+                                            <segue destination="c6p-fQ-qMp" kind="presentation" identifier="segueBook" id="klK-I1-jsX"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -331,7 +332,7 @@
             <objects>
                 <viewController id="CWy-3q-HbE" userLabel="Book View Controller" customClass="BookViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qd5-iw-FOp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IB1-dm-dpt">
@@ -388,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfk-ka-oGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513" y="-1425"/>
+            <point key="canvasLocation" x="2607" y="-129"/>
         </scene>
         <!--Creation View Controller-->
         <scene sceneID="ZXN-oz-z6b">
@@ -535,13 +536,14 @@
             </objects>
             <point key="canvasLocation" x="928.79999999999995" y="119.1904047976012"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Current Book Controller-->
         <scene sceneID="qYx-4x-7BL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c6p-fQ-qMp" sceneMemberID="viewController">
+                <navigationController title="Current Book Controller" automaticallyAdjustsScrollViewInsets="NO" id="c6p-fQ-qMp" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gqi-CK-cgt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oWl-NS-DAt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -551,11 +553,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wok-xw-F2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="-1425"/>
+            <point key="canvasLocation" x="1777" y="-129"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8DB-lK-8pJ"/>
+        <segue reference="qsu-Vd-2ft"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Interprio_Login_Logo" width="200" height="200"/>

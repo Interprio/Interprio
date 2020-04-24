@@ -92,6 +92,23 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Grab selected book
+        let cell = sender as! UICollectionViewCell
+        
+        let indexPath = collectionView.indexPath(for: cell)!
+        
+        let book = books[indexPath.row]
+        print(book)
+        if(segue.identifier == "segueBook"){
+        //pass the book details in segue to destination
+            let navVC = segue.destination as! UINavigationController
+            let bookViewController = navVC.topViewController as! BookViewController
+        bookViewController.book = book
+            
+        }
+    }
+    
     
     
 

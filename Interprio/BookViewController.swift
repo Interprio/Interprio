@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class BookViewController: UIViewController {
-
+    var book: PFObject!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(book)
         // Do any additional setup after loading the view.
     }
     
