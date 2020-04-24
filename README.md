@@ -205,7 +205,7 @@ https://www.figma.com/file/hh5T3gI96g9CTW45m2tjcv/Interpo?node-id=0%3A1
 
 **Finished Logic**
 
-![UX](demo/Logic.gif)
+![UX](Logic.gif)
 
 **Production Ready**
 
