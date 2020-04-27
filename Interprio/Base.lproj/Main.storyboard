@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uuf-eo-RNh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -332,7 +332,7 @@
             <objects>
                 <viewController id="CWy-3q-HbE" userLabel="Book View Controller" customClass="BookViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qd5-iw-FOp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IB1-dm-dpt">
@@ -396,25 +396,40 @@
             <objects>
                 <viewController title="Book View Controller Page" id="uuf-eo-RNh" customClass="BookPageViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3C7-fi-2RF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JlX-fR-ISr">
-                                <rect key="frame" x="16" y="153" width="343" height="319"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlX-fR-ISr">
+                                <rect key="frame" x="16" y="56" width="343" height="396"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-QR-SFM">
+                                <rect key="frame" x="16" y="480" width="184" height="83"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addPage:" destination="uuf-eo-RNh" eventType="touchUpInside" id="fP2-zP-5qe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MTg-QR-SFM" firstAttribute="top" secondItem="JlX-fR-ISr" secondAttribute="bottom" constant="28" id="EgV-rq-stO"/>
+                            <constraint firstAttribute="bottom" secondItem="JlX-fR-ISr" secondAttribute="bottom" constant="195" id="M2c-Rx-SAh"/>
+                            <constraint firstItem="JlX-fR-ISr" firstAttribute="trailing" secondItem="3C7-fi-2RF" secondAttribute="trailingMargin" id="T9I-od-aFw"/>
+                            <constraint firstItem="JlX-fR-ISr" firstAttribute="top" secondItem="wgF-V7-lho" secondAttribute="top" id="btU-CQ-P3V"/>
+                            <constraint firstItem="JlX-fR-ISr" firstAttribute="leading" secondItem="MTg-QR-SFM" secondAttribute="leading" id="rmX-XH-O4S"/>
+                            <constraint firstItem="JlX-fR-ISr" firstAttribute="leading" secondItem="3C7-fi-2RF" secondAttribute="leadingMargin" id="utY-Su-PqF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wgF-V7-lho"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fzS-S6-pwD"/>
                     <connections>
                         <outlet property="contentView" destination="JlX-fR-ISr" id="ZR5-NW-3ic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkM-zC-225" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3733.5999999999999" y="-785.75712143928047"/>
+            <point key="canvasLocation" x="2605.5999999999999" y="-777.66116941529242"/>
         </scene>
         <!--Book Data View Controller-->
         <scene sceneID="iLv-Sa-JP5">
@@ -424,19 +439,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydL-gB-KZQ">
-                                <rect key="frame" x="100" y="323" width="180" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydL-gB-KZQ">
+                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ut-Q1-uhR">
+                                <rect key="frame" x="16" y="20" width="343" height="258"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="trailing" secondItem="4Ut-Q1-uhR" secondAttribute="trailing" constant="16" id="BbA-wp-rbE"/>
+                            <constraint firstItem="ydL-gB-KZQ" firstAttribute="top" secondItem="4Ut-Q1-uhR" secondAttribute="bottom" constant="45.5" id="M8K-ul-vLC"/>
+                            <constraint firstItem="4Ut-Q1-uhR" firstAttribute="top" secondItem="Kw1-6A-tzh" secondAttribute="top" constant="20" id="eF5-2A-rm9"/>
+                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="trailing" secondItem="ydL-gB-KZQ" secondAttribute="trailing" constant="166.5" id="fjm-Fy-Gvg"/>
+                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="bottom" secondItem="ydL-gB-KZQ" secondAttribute="bottom" constant="323" id="fmU-I0-t7F"/>
+                            <constraint firstItem="4Ut-Q1-uhR" firstAttribute="leading" secondItem="Kw1-6A-tzh" secondAttribute="leading" constant="16" id="mcf-ww-I02"/>
+                            <constraint firstItem="ydL-gB-KZQ" firstAttribute="top" secondItem="4Ut-Q1-uhR" secondAttribute="bottom" constant="45.5" id="pbs-20-Z4h"/>
+                            <constraint firstItem="ydL-gB-KZQ" firstAttribute="leading" secondItem="Kw1-6A-tzh" secondAttribute="leading" constant="166.5" id="veB-vz-9S8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kw1-6A-tzh"/>
                     </view>
                     <connections>
                         <outlet property="displayLabel" destination="ydL-gB-KZQ" id="DlS-dc-geV"/>
+                        <outlet property="pageImageView" destination="4Ut-Q1-uhR" id="f6G-sy-Gmg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olv-Ri-gtr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -608,7 +636,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CWy-3q-HbE" kind="relationship" relationship="rootViewController" id="OTQ-C3-6gV"/>
+                        <segue destination="uuf-eo-RNh" kind="relationship" relationship="rootViewController" id="XPO-zn-0sG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wok-xw-F2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -617,7 +645,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qsu-Vd-2ft"/>
+        <segue reference="8DB-lK-8pJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Interprio_Login_Logo" width="200" height="200"/>

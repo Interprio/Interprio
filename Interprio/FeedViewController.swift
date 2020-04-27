@@ -83,12 +83,11 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let book = books[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookCell", for: indexPath) as! BookCollectionViewCell
-        print(books[indexPath.row])
         let imageFile = book["coverImage"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
-        
-        cell.bookCellImage.af_setImage(withURL: url)
+        print(url)
+        cell.bookCellImage.af.setImage(withURL: url)
         return cell
     }
     
@@ -97,19 +96,27 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = sender as! UICollectionViewCell
         
         let indexPath = collectionView.indexPath(for: cell)!
-        
+        //get all pages in book
         let book = books[indexPath.row]
-        print(book)
+//        print(book)
         if(segue.identifier == "segueBook"){
         //pass the book details in segue to destination
             let navVC = segue.destination as! UINavigationController
-            let bookViewController = navVC.topViewController as! BookViewController
+            let bookViewController = navVC.topViewController as! BookPageViewController
         bookViewController.book = book
-            
+            do{
+            try bookViewController.pages = getBookPages()
+            } catch {
+                print("failed to load pages")
+            }
         }
     }
     
-    
+    func getBookPages() throws -> [PFObject]   {
+        let query = PFQuery(className: "Pages")
+        let results = try query.findObjects()
+        return results
+    }
     
 
     /*

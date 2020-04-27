@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class BookDataViewController: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
+    @IBOutlet weak var pageImageView: UIImageView!
     var displayText: String?
+    var displayImage: UIImage?
     var index: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayLabel.text = displayText
+        pageImageView.image = displayImage
         // Do any additional setup after loading the view.
     }
     

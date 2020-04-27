@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import AlamofireImage
+import Parse
 
 class BookPageViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     // Pages in collection
     let dataSource = ["Book 1","Book 2","Book3 "]
+    var book: PFObject!
+    var pages: [PFObject]!
     //view controller index of pages
     var currentViewControllerIndex = 0
+    var indexPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +69,12 @@ class BookPageViewController: UIViewController {
         }
         
         dataViewController.index = index
-        dataViewController.displayText = dataSource[index]
-        
+        dataViewController.displayText = pages[index]["caption"] as! String
+        let imageFile = pages[index]["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        print("Dataview", url)
+       dataViewController.pageImageView.af.setImage(withURL: url)
         return dataViewController
     }
     /*
@@ -78,9 +87,13 @@ class BookPageViewController: UIViewController {
     }
     */
 
+    @IBAction func addPage(_ sender: Any) {
+        print("add page", indexPage)
 
-
-}
+        
+    }
+    
+    }
 
 extension BookPageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
@@ -89,7 +102,7 @@ extension BookPageViewController: UIPageViewControllerDelegate, UIPageViewContro
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return dataSource.count
+        return pages.count
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -101,13 +114,13 @@ extension BookPageViewController: UIPageViewControllerDelegate, UIPageViewContro
         }
         
         currentViewControllerIndex = currentIndex
-        
+
         if currentIndex == 0 {
             return nil
         }
         
         currentIndex -= 1
-        
+        self.indexPage = currentIndex
         return detailViewControllerAt(index: currentIndex)
     }
     
@@ -118,15 +131,15 @@ extension BookPageViewController: UIPageViewControllerDelegate, UIPageViewContro
         guard var currentIndex = dataViewController?.index else {
             return nil
         }
-        
-        if currentIndex == dataSource.count {
+        if currentIndex == dataSource.count - 1{
             return nil
         }
         
         currentIndex += 1
-        
+        self.indexPage = currentIndex
         return detailViewControllerAt(index: currentIndex)
         
     }
+
     
 }
