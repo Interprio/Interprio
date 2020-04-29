@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import AlamofireImage
 import Parse
 
@@ -22,6 +23,7 @@ class BookPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(pages.count)
         configurePageViewController()
         // Do any additional setup after loading the view.
     }
@@ -59,7 +61,7 @@ class BookPageViewController: UIViewController {
     
     func detailViewControllerAt(index: Int) -> BookDataViewController? {
         
-        if index >= dataSource.count || dataSource.count == 0 {
+        if index >= pages.count || dataSource.count == 0 {
             return nil
         }
         
@@ -71,10 +73,17 @@ class BookPageViewController: UIViewController {
         dataViewController.index = index
         dataViewController.displayText = pages[index]["caption"] as! String
         let imageFile = pages[index]["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-        print("Dataview", url)
-       dataViewController.pageImageView.af.setImage(withURL: url)
+        imageFile.getDataInBackground { (imageData: Data?, error: Error?) in
+            if let error = error{
+                print(error.localizedDescription)
+            } else if let imageData = imageData{
+                 let image =  UIImage(data: imageData)
+                  dataViewController.pageImageView.image =  image
+                
+            }
+        }
+        
+    
         return dataViewController
     }
     /*
@@ -131,7 +140,7 @@ extension BookPageViewController: UIPageViewControllerDelegate, UIPageViewContro
         guard var currentIndex = dataViewController?.index else {
             return nil
         }
-        if currentIndex == dataSource.count - 1{
+        if currentIndex == pages.count - 1{
             return nil
         }
         

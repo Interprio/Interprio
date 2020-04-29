@@ -258,7 +258,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Submit a Book"/>
                                 <connections>
-                                    <segue destination="dnP-YX-Rxj" kind="presentation" id="j0F-v6-pr9"/>
+                                    <action selector="onSubmitBook:" destination="EuQ-nM-cLv" eventType="touchUpInside" id="s8h-C5-jPy"/>
+                                    <segue destination="dnP-YX-Rxj" kind="presentation" identifier="submitBookSegue" id="j0F-v6-pr9"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yug-ZX-qAs">
@@ -400,11 +401,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JlX-fR-ISr">
-                                <rect key="frame" x="16" y="56" width="343" height="396"/>
+                                <rect key="frame" x="16" y="56" width="343" height="428"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-QR-SFM">
-                                <rect key="frame" x="16" y="480" width="184" height="83"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-QR-SFM">
+                                <rect key="frame" x="16" y="597" width="184" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="addPage:" destination="uuf-eo-RNh" eventType="touchUpInside" id="fP2-zP-5qe"/>
@@ -413,12 +414,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="MTg-QR-SFM" firstAttribute="top" secondItem="JlX-fR-ISr" secondAttribute="bottom" constant="28" id="EgV-rq-stO"/>
-                            <constraint firstAttribute="bottom" secondItem="JlX-fR-ISr" secondAttribute="bottom" constant="195" id="M2c-Rx-SAh"/>
-                            <constraint firstItem="JlX-fR-ISr" firstAttribute="trailing" secondItem="3C7-fi-2RF" secondAttribute="trailingMargin" id="T9I-od-aFw"/>
-                            <constraint firstItem="JlX-fR-ISr" firstAttribute="top" secondItem="wgF-V7-lho" secondAttribute="top" id="btU-CQ-P3V"/>
-                            <constraint firstItem="JlX-fR-ISr" firstAttribute="leading" secondItem="MTg-QR-SFM" secondAttribute="leading" id="rmX-XH-O4S"/>
-                            <constraint firstItem="JlX-fR-ISr" firstAttribute="leading" secondItem="3C7-fi-2RF" secondAttribute="leadingMargin" id="utY-Su-PqF"/>
+                            <constraint firstItem="wgF-V7-lho" firstAttribute="trailing" secondItem="JlX-fR-ISr" secondAttribute="trailing" constant="16" id="257-HO-3wg"/>
+                            <constraint firstItem="JlX-fR-ISr" firstAttribute="top" secondItem="wgF-V7-lho" secondAttribute="top" id="9KO-Jl-aV0"/>
+                            <constraint firstItem="MTg-QR-SFM" firstAttribute="top" secondItem="JlX-fR-ISr" secondAttribute="bottom" constant="113" id="BH5-Pf-wkB"/>
+                            <constraint firstItem="JlX-fR-ISr" firstAttribute="leading" secondItem="wgF-V7-lho" secondAttribute="leading" constant="16" id="Dj6-Qs-NoY"/>
+                            <constraint firstItem="MTg-QR-SFM" firstAttribute="top" secondItem="JlX-fR-ISr" secondAttribute="bottom" constant="113" id="Ib3-pv-zt7"/>
+                            <constraint firstItem="wgF-V7-lho" firstAttribute="bottom" secondItem="MTg-QR-SFM" secondAttribute="bottom" constant="20" id="i4e-u5-QWx"/>
+                            <constraint firstItem="wgF-V7-lho" firstAttribute="trailing" secondItem="MTg-QR-SFM" secondAttribute="trailing" constant="175" id="kf6-vq-coz"/>
+                            <constraint firstItem="MTg-QR-SFM" firstAttribute="leading" secondItem="wgF-V7-lho" secondAttribute="leading" constant="16" id="kt7-Ts-Cth"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgF-V7-lho"/>
                     </view>
@@ -439,26 +442,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InterprioLogoOriginal" translatesAutoresizingMaskIntoConstraints="NO" id="4Ut-Q1-uhR">
+                                <rect key="frame" x="16" y="20" width="343" height="527"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydL-gB-KZQ">
-                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
+                                <rect key="frame" x="16" y="555" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="E26-Z2-NnT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ut-Q1-uhR">
-                                <rect key="frame" x="16" y="20" width="343" height="258"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="trailing" secondItem="4Ut-Q1-uhR" secondAttribute="trailing" constant="16" id="BbA-wp-rbE"/>
-                            <constraint firstItem="ydL-gB-KZQ" firstAttribute="top" secondItem="4Ut-Q1-uhR" secondAttribute="bottom" constant="45.5" id="M8K-ul-vLC"/>
-                            <constraint firstItem="4Ut-Q1-uhR" firstAttribute="top" secondItem="Kw1-6A-tzh" secondAttribute="top" constant="20" id="eF5-2A-rm9"/>
-                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="trailing" secondItem="ydL-gB-KZQ" secondAttribute="trailing" constant="166.5" id="fjm-Fy-Gvg"/>
-                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="bottom" secondItem="ydL-gB-KZQ" secondAttribute="bottom" constant="323" id="fmU-I0-t7F"/>
-                            <constraint firstItem="4Ut-Q1-uhR" firstAttribute="leading" secondItem="Kw1-6A-tzh" secondAttribute="leading" constant="16" id="mcf-ww-I02"/>
-                            <constraint firstItem="ydL-gB-KZQ" firstAttribute="top" secondItem="4Ut-Q1-uhR" secondAttribute="bottom" constant="45.5" id="pbs-20-Z4h"/>
-                            <constraint firstItem="ydL-gB-KZQ" firstAttribute="leading" secondItem="Kw1-6A-tzh" secondAttribute="leading" constant="166.5" id="veB-vz-9S8"/>
+                            <constraint firstItem="ydL-gB-KZQ" firstAttribute="leading" secondItem="Kw1-6A-tzh" secondAttribute="leading" constant="16" id="4CC-nB-tpX"/>
+                            <constraint firstItem="ydL-gB-KZQ" firstAttribute="top" secondItem="4Ut-Q1-uhR" secondAttribute="bottom" constant="8" id="4Mt-kC-csn"/>
+                            <constraint firstItem="4Ut-Q1-uhR" firstAttribute="top" secondItem="Kw1-6A-tzh" secondAttribute="top" constant="20" id="75J-la-wWT"/>
+                            <constraint firstItem="4Ut-Q1-uhR" firstAttribute="leading" secondItem="Kw1-6A-tzh" secondAttribute="leading" constant="16" id="KkL-IC-Mkn"/>
+                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="bottom" secondItem="ydL-gB-KZQ" secondAttribute="bottom" constant="91" id="L8f-w2-P6s"/>
+                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="trailing" secondItem="4Ut-Q1-uhR" secondAttribute="trailing" constant="16" id="TTR-gC-kSQ"/>
+                            <constraint firstItem="Kw1-6A-tzh" firstAttribute="trailing" secondItem="ydL-gB-KZQ" secondAttribute="trailing" constant="16" id="pO4-pB-59H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kw1-6A-tzh"/>
                     </view>
@@ -648,6 +653,7 @@
         <segue reference="8DB-lK-8pJ"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="InterprioLogoOriginal" width="327" height="329"/>
         <image name="Interprio_Login_Logo" width="200" height="200"/>
         <image name="arrowtriangle.down" catalog="system" width="128" height="124"/>
         <image name="arrowtriangle.up" catalog="system" width="128" height="124"/>

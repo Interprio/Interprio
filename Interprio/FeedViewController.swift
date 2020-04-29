@@ -70,9 +70,12 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     @IBAction func onSubmitBook(_ sender: Any) {
-        performSegue(withIdentifier: "submitBookSegue", sender: self)
+//        performSegue(withIdentifier: "submitBookSegue", sender: self)
+        print("submit book")
     }
     
+    
+
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -92,6 +95,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "segueBook"){
         //Grab selected book
         let cell = sender as! UICollectionViewCell
         
@@ -99,7 +103,6 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         //get all pages in book
         let book = books[indexPath.row]
 //        print(book)
-        if(segue.identifier == "segueBook"){
         //pass the book details in segue to destination
             let navVC = segue.destination as! UINavigationController
             let bookViewController = navVC.topViewController as! BookPageViewController
