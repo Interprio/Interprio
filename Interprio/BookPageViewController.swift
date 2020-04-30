@@ -78,7 +78,10 @@ class BookPageViewController: UIViewController {
                 print(error.localizedDescription)
             } else if let imageData = imageData{
                  let image =  UIImage(data: imageData)
-                  dataViewController.pageImageView.image =  image
+                if dataViewController == nil {
+                    return
+                }
+                  dataViewController.pageImageView?.image =  image
                 
             }
         }

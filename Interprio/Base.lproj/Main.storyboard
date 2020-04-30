@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EuQ-nM-cLv">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -390,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfk-ka-oGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2607" y="-129"/>
+            <point key="canvasLocation" x="4370" y="-779"/>
         </scene>
         <!--Book View Controller Page-->
         <scene sceneID="QUd-wd-hNj">
@@ -406,9 +406,10 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-QR-SFM">
                                 <rect key="frame" x="16" y="597" width="184" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Add Your Page"/>
                                 <connections>
                                     <action selector="addPage:" destination="uuf-eo-RNh" eventType="touchUpInside" id="fP2-zP-5qe"/>
+                                    <segue destination="rQ5-pM-3Sw" kind="presentation" id="wWL-SF-GZP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -425,14 +426,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wgF-V7-lho"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fzS-S6-pwD"/>
+                    <navigationItem key="navigationItem" title="Name of Book" id="fzS-S6-pwD"/>
                     <connections>
                         <outlet property="contentView" destination="JlX-fR-ISr" id="ZR5-NW-3ic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkM-zC-225" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2605.5999999999999" y="-777.66116941529242"/>
+            <point key="canvasLocation" x="2926" y="-778"/>
         </scene>
         <!--Book Data View Controller-->
         <scene sceneID="iLv-Sa-JP5">
@@ -474,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Olv-Ri-gtr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3352.8000000000002" y="-129.08545727136433"/>
+            <point key="canvasLocation" x="3575" y="-129"/>
         </scene>
         <!--Custom Page View Controller-->
         <scene sceneID="nEw-Jz-TDY">
@@ -482,14 +483,14 @@
                 <pageViewController storyboardIdentifier="CustomPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="hUU-sO-e8u" customClass="CustomPageViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2sM-1P-Caf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4060" y="-129"/>
+            <point key="canvasLocation" x="2908" y="-129"/>
         </scene>
         <!--Creation View Controller-->
         <scene sceneID="ZXN-oz-z6b">
             <objects>
                 <viewController id="rQ5-pM-3Sw" userLabel="Creation View Controller" customClass="PageCreateViewController" customModule="Interprio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cYF-RU-srf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGw-9p-lzJ">
@@ -526,7 +527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOs-mN-Mw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3562" y="-1425"/>
+            <point key="canvasLocation" x="3574" y="-779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tna-52-Xz3">

@@ -102,21 +102,22 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let indexPath = collectionView.indexPath(for: cell)!
         //get all pages in book
         let book = books[indexPath.row]
-//        print(book)
+            print("book", book)
         //pass the book details in segue to destination
             let navVC = segue.destination as! UINavigationController
             let bookViewController = navVC.topViewController as! BookPageViewController
         bookViewController.book = book
             do{
-            try bookViewController.pages = getBookPages()
+                try bookViewController.pages = getBookPages(book: book)
             } catch {
                 print("failed to load pages")
             }
         }
     }
     
-    func getBookPages() throws -> [PFObject]   {
+    func getBookPages(book:PFObject) throws -> [PFObject]   {
         let query = PFQuery(className: "Pages")
+        query.whereKey("book", equalTo: book)
         let results = try query.findObjects()
         return results
     }
