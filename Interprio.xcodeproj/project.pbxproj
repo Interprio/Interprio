@@ -22,6 +22,9 @@
 		427747762436E64900B3D232 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427747752436E64900B3D232 /* BookViewController.swift */; };
 		427747782436E83200B3D232 /* PageCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427747772436E83200B3D232 /* PageCreateViewController.swift */; };
 		42D204D424399226002CDA54 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D204D324399226002CDA54 /* BookCollectionViewCell.swift */; };
+		42DD1556245621CA001801F8 /* BookDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD1555245621CA001801F8 /* BookDataViewController.swift */; };
+		42DD1558245622A0001801F8 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD1557245622A0001801F8 /* CustomPageViewController.swift */; };
+		42DD155A245623CA001801F8 /* BookPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD1559245623CA001801F8 /* BookPageViewController.swift */; };
 		42FAF8922444C25E00382653 /* Pods_Interprio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C15CA704AEAD242BC50E6741 /* Pods_Interprio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83B9CEA324528D5E00136737 /* ProfileBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B9CEA224528D5E00136737 /* ProfileBookCollectionViewCell.swift */; };
 		B60A1811C67381139BAFD76F /* Pods_InterprioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB390D13FD02306B32486CE /* Pods_InterprioTests.framework */; };
@@ -84,6 +87,9 @@
 		428E8D1724496B6A004B92F4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		428E8D1B24496BAE004B92F4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D204D324399226002CDA54 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		42DD1555245621CA001801F8 /* BookDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataViewController.swift; sourceTree = "<group>"; };
+		42DD1557245622A0001801F8 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		42DD1559245623CA001801F8 /* BookPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageViewController.swift; sourceTree = "<group>"; };
 		42FAF8992444C36600382653 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FAF89C2444C36B00382653 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DA2BF4998E948DA5BD731F /* Pods-Interprio-InterprioUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interprio-InterprioUITests.debug.xcconfig"; path = "Target Support Files/Pods-Interprio-InterprioUITests/Pods-Interprio-InterprioUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +186,9 @@
 				427747752436E64900B3D232 /* BookViewController.swift */,
 				427747772436E83200B3D232 /* PageCreateViewController.swift */,
 				42D204D324399226002CDA54 /* BookCollectionViewCell.swift */,
+				42DD1555245621CA001801F8 /* BookDataViewController.swift */,
+				42DD1557245622A0001801F8 /* CustomPageViewController.swift */,
+				42DD1559245623CA001801F8 /* BookPageViewController.swift */,
 				83B9CEA224528D5E00136737 /* ProfileBookCollectionViewCell.swift */,
 			);
 			path = Interprio;
@@ -472,10 +481,13 @@
 				427747782436E83200B3D232 /* PageCreateViewController.swift in Sources */,
 				42453DD524323E680047CC19 /* LoginViewController.swift in Sources */,
 				427747722436D82700B3D232 /* BookCreateViewController.swift in Sources */,
+				42DD155A245623CA001801F8 /* BookPageViewController.swift in Sources */,
+				42DD1556245621CA001801F8 /* BookDataViewController.swift in Sources */,
 				42D204D424399226002CDA54 /* BookCollectionViewCell.swift in Sources */,
 				427747702436D0BA00B3D232 /* RegisterViewController.swift in Sources */,
 				4207544624311B3800C233E7 /* AppDelegate.swift in Sources */,
 				427747742436DE9A00B3D232 /* ProfileViewController.swift in Sources */,
+				42DD1558245622A0001801F8 /* CustomPageViewController.swift in Sources */,
 				427747762436E64900B3D232 /* BookViewController.swift in Sources */,
 				42453DD724323E860047CC19 /* FeedViewController.swift in Sources */,
 				4207544824311B3800C233E7 /* SceneDelegate.swift in Sources */,

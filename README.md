@@ -197,16 +197,16 @@ https://www.figma.com/file/hh5T3gI96g9CTW45m2tjcv/Interpo?node-id=0%3A1
 
 **Finished UX**
 
-![UX](demo/UX.gif)
+![UX](UX.gif)
 
 **Finished Database**
 
-![UX](demo/Database.gif)
+![UX](Database.gif)
 
 **Finished Logic**
 
-![UX](demo/Logic.gif)
+![UX](Logic.gif)
 
 **Production Ready**
 
-![UX](demo/Production.gif)
+![UX](Production.gif)

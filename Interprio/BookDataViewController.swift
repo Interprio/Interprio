@@ -1,19 +1,26 @@
 //
-//  BookViewController.swift
+//  BookDataViewController.swift
 //  Interprio
 //
-//  Created by Samuel Elbaz on 4/2/20.
+//  Created by Samuel Elbaz on 4/26/20.
 //  Copyright © 2020 Interprio. All rights reserved.
 //
 
 import UIKit
-import Parse
+import AlamofireImage
 
-class BookViewController: UIViewController {
-    var book: PFObject!
+class BookDataViewController: UIViewController {
+
+    @IBOutlet weak var displayLabel: UILabel!
+    @IBOutlet weak var pageImageView: UIImageView!
+    var displayText: String?
+    var displayImage: UIImage?
+    var index: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(book)
+        displayLabel.text = displayText
+        pageImageView.image = displayImage
         // Do any additional setup after loading the view.
     }
     

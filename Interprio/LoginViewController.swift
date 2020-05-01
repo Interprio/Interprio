@@ -19,6 +19,12 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        
+       if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
+            self.performSegue(withIdentifier: "loginSegue", sender: self)
+        }
+    }
     @IBAction func onLogin(_ sender: Any) {
         //Segue to FeedViewController
         let username = usernameTextField.text!
@@ -27,8 +33,9 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
             if (user != nil){
                 //segue
+                
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            } else {
+                UserDefaults.standard.set(true, forKey: "userLoggedIn")            } else {
                 self.errorTextLabel.isHidden = false
                 self.errorTextLabel.text = "Sorry please enter valid credentials or register :)"
                 UIView.animate(withDuration: 3, animations: {self.errorTextLabel.alpha = 0}, completion: {_ in

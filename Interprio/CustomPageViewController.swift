@@ -1,19 +1,18 @@
 //
-//  BookViewController.swift
+//  CustomPageViewController.swift
 //  Interprio
 //
-//  Created by Samuel Elbaz on 4/2/20.
+//  Created by Samuel Elbaz on 4/26/20.
 //  Copyright © 2020 Interprio. All rights reserved.
 //
 
 import UIKit
-import Parse
 
-class BookViewController: UIViewController {
-    var book: PFObject!
+class CustomPageViewController: UIPageViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(book)
+
         // Do any additional setup after loading the view.
     }
     
