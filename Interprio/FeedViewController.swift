@@ -60,7 +60,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
         delegate.window?.rootViewController = loginViewController
-        
+        UserDefaults.standard.set(false, forKey: "userLoggedIn")
     }
     
     @IBAction func toProfile(_ sender: Any) {
