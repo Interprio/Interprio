@@ -5,7 +5,7 @@
 //  Created by Samuel Elbaz on 3/30/20.
 //  Copyright © 2020 Interprio. All rights reserved.
 //
-
+// By Mitchell, Samuel, Jesus, Chris, and Johann
 import UIKit
 import Parse
 
