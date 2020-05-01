@@ -13,7 +13,6 @@ import Parse
 class FeedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
 
     
-      
     @IBOutlet weak var collectionView: UICollectionView!
     var books = [PFObject]()
     var numberOfPosts: Int!

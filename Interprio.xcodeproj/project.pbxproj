@@ -23,6 +23,7 @@
 		427747782436E83200B3D232 /* PageCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427747772436E83200B3D232 /* PageCreateViewController.swift */; };
 		42D204D424399226002CDA54 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D204D324399226002CDA54 /* BookCollectionViewCell.swift */; };
 		42FAF8922444C25E00382653 /* Pods_Interprio.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C15CA704AEAD242BC50E6741 /* Pods_Interprio.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83B9CEA324528D5E00136737 /* ProfileBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B9CEA224528D5E00136737 /* ProfileBookCollectionViewCell.swift */; };
 		B60A1811C67381139BAFD76F /* Pods_InterprioTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB390D13FD02306B32486CE /* Pods_InterprioTests.framework */; };
 		E1C7EAB1AC428A005120E1EB /* Pods_Interprio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03E7B7F5D0B88A3DC673C22 /* Pods_Interprio.framework */; };
 		F77ED374BEBB4EF076253390 /* Pods_Interprio_InterprioUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C6BC9FAED49997E17348CC /* Pods_Interprio_InterprioUITests.framework */; };
@@ -91,6 +92,7 @@
 		654B9B56F86739C1132A93E3 /* Pods-InterprioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterprioTests.debug.xcconfig"; path = "Target Support Files/Pods-InterprioTests/Pods-InterprioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		695AE1571982468BD16210CB /* Pods-Interprio-InterprioUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interprio-InterprioUITests.release.xcconfig"; path = "Target Support Files/Pods-Interprio-InterprioUITests/Pods-Interprio-InterprioUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6BB390D13FD02306B32486CE /* Pods_InterprioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterprioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B9CEA224528D5E00136737 /* ProfileBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6C6BC9FAED49997E17348CC /* Pods_Interprio_InterprioUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interprio_InterprioUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15CA704AEAD242BC50E6741 /* Pods_Interprio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interprio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03E7B7F5D0B88A3DC673C22 /* Pods_Interprio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interprio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				427747752436E64900B3D232 /* BookViewController.swift */,
 				427747772436E83200B3D232 /* PageCreateViewController.swift */,
 				42D204D324399226002CDA54 /* BookCollectionViewCell.swift */,
+				83B9CEA224528D5E00136737 /* ProfileBookCollectionViewCell.swift */,
 			);
 			path = Interprio;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				427747762436E64900B3D232 /* BookViewController.swift in Sources */,
 				42453DD724323E860047CC19 /* FeedViewController.swift in Sources */,
 				4207544824311B3800C233E7 /* SceneDelegate.swift in Sources */,
+				83B9CEA324528D5E00136737 /* ProfileBookCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
