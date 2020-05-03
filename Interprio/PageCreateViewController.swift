@@ -23,6 +23,7 @@ class PageCreateViewController: UIViewController, ImageScannerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultImage = cameraImageView.image
+        captionTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }

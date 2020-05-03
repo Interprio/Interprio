@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,7 +17,11 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        emailTextField.delegate = self
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        verifyPasswordTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -74,6 +78,11 @@ class RegisterViewController: UIViewController {
         
         [self .dismiss(animated: true, completion: nil)]
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 
