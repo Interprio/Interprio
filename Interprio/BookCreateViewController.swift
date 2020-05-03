@@ -35,7 +35,6 @@ class BookCreateViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
-        print("camera")
         let scannerViewController = ImageScannerController()
         scannerViewController.imageScannerDelegate = self
         present(scannerViewController, animated: true)
@@ -60,7 +59,7 @@ class BookCreateViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // You are responsible for dismissing the ImageScannerController
         let image = results.croppedScan.image as! UIImage
         let size = CGSize(width: 640, height: 480)
-        let scaledImage = image.af.imageAspectScaled(toFill: size)
+        let scaledImage = image.af.imageAspectScaled(toFit: size)
         cameraImageView.image = scaledImage
         scanner.dismiss(animated: true)
     }

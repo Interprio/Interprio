@@ -89,7 +89,6 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let imageFile = book["coverImage"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
-        print(url)
         cell.bookCellImage.af.setImage(withURL: url)
         return cell
     }
@@ -102,7 +101,6 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let indexPath = collectionView.indexPath(for: cell)!
         //get all pages in book
         let book = books[indexPath.row]
-            print("book", book)
         //pass the book details in segue to destination
             let navVC = segue.destination as! UINavigationController
             let bookViewController = navVC.topViewController as! BookPageViewController

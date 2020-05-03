@@ -13,9 +13,8 @@ import Parse
 
 class BookPageViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
-    // Pages in collection
-    let dataSource = ["Book 1","Book 2","Book3 "]
     var book: PFObject!
+    // Pages in collection
     var pages: [PFObject]!
     //view controller index of pages
     var currentViewControllerIndex = 0
@@ -23,7 +22,6 @@ class BookPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(pages.count)
         configurePageViewController()
         // Do any additional setup after loading the view.
     }
@@ -61,7 +59,7 @@ class BookPageViewController: UIViewController {
     
     func detailViewControllerAt(index: Int) -> BookDataViewController? {
         
-        if index >= pages.count || dataSource.count == 0 {
+        if index >= pages.count || pages.count == 0 {
             return nil
         }
         
@@ -100,8 +98,19 @@ class BookPageViewController: UIViewController {
     */
 
     @IBAction func addPage(_ sender: Any) {
-        print("add page", indexPage)
+//        print("current user ", PFUser.current())
+//        print("current book ", book)
+//        print("total pages ", pages.count)
 
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "addPage") {
+            let pageCreateviewController = segue.destination as! PageCreateViewController
+            pageCreateviewController.book = book
+            pageCreateviewController.pages = pages
+        }
         
     }
     
