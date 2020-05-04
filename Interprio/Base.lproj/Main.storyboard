@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,21 +112,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-vX-jsp" customClass="Username">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt9-vX-jsp">
                                 <rect key="frame" x="15" y="162" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Username"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="por-zr-Jcn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="por-zr-Jcn">
                                 <rect key="frame" x="16" y="74" width="78" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="40a-5H-1TH"/>
+                                </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v92-cL-Mg9">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v92-cL-Mg9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Profile" id="aiV-Cm-uU0">
                                         <barButtonItem key="leftBarButtonItem" title="Back" image="homeButton_tab" id="ffC-g2-TZK">
@@ -138,28 +138,93 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KKn-q5-tZw">
-                                <rect key="frame" x="16" y="251" width="343" height="283"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zUD-G9-PGi">
+                                <rect key="frame" x="0.0" y="270" width="375" height="397"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Books" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nx-xe-ZTg">
-                                <rect key="frame" x="15" y="211" width="79" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V9G-vp-DAP">
+                                    <size key="itemSize" width="167" height="198"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileBookCell" id="Qtn-CX-OvQ" customClass="ProfileBookCollectionViewCell" customModule="Interprio" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="198"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="90J-09-Cxk">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="198"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-Vg-c18">
+                                                    <rect key="frame" x="8" y="8" width="151" height="138"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV5-YP-czL">
+                                                    <rect key="frame" x="62" y="154" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fch-Vg-c18" firstAttribute="top" secondItem="90J-09-Cxk" secondAttribute="topMargin" id="0c6-lE-rON"/>
+                                                <constraint firstItem="Fch-Vg-c18" firstAttribute="trailing" secondItem="90J-09-Cxk" secondAttribute="trailingMargin" id="AjJ-si-Ela"/>
+                                                <constraint firstItem="sV5-YP-czL" firstAttribute="leading" secondItem="90J-09-Cxk" secondAttribute="leading" constant="62" id="CRZ-UI-VMU"/>
+                                                <constraint firstItem="sV5-YP-czL" firstAttribute="top" secondItem="Fch-Vg-c18" secondAttribute="bottom" constant="8" id="R5S-zM-xup"/>
+                                                <constraint firstItem="Fch-Vg-c18" firstAttribute="leading" secondItem="90J-09-Cxk" secondAttribute="leadingMargin" id="a5W-Rg-2JW"/>
+                                                <constraint firstAttribute="bottom" secondItem="sV5-YP-czL" secondAttribute="bottom" constant="23" id="to4-gf-Kgr"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="167" height="198"/>
+                                        <connections>
+                                            <outlet property="bookImage" destination="Fch-Vg-c18" id="pkh-6l-oHa"/>
+                                            <outlet property="bookTitleLabel" destination="sV5-YP-czL" id="EvW-2V-DXv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Books" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nx-xe-ZTg">
+                                <rect key="frame" x="148" y="211" width="79" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="zWd-sL-Rha"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="v92-cL-Mg9" firstAttribute="top" secondItem="48i-E8-Neb" secondAttribute="top" id="0i8-Vj-Vka"/>
+                            <constraint firstItem="48i-E8-Neb" firstAttribute="trailing" secondItem="por-zr-Jcn" secondAttribute="trailing" constant="281" id="214-2R-uY1"/>
+                            <constraint firstItem="9Nx-xe-ZTg" firstAttribute="leading" secondItem="48i-E8-Neb" secondAttribute="leading" constant="148" id="9i9-fg-v2v"/>
+                            <constraint firstItem="zUD-G9-PGi" firstAttribute="top" secondItem="9Nx-xe-ZTg" secondAttribute="bottom" constant="8" id="DSU-Wx-l98"/>
+                            <constraint firstItem="por-zr-Jcn" firstAttribute="top" secondItem="v92-cL-Mg9" secondAttribute="bottom" constant="30" id="G3J-yH-5Ra"/>
+                            <constraint firstItem="zUD-G9-PGi" firstAttribute="top" secondItem="zt9-vX-jsp" secondAttribute="bottom" constant="87" id="JSo-e1-jnk"/>
+                            <constraint firstItem="por-zr-Jcn" firstAttribute="leading" secondItem="d9l-0u-g04" secondAttribute="leadingMargin" id="LGM-Fa-CgK"/>
+                            <constraint firstItem="por-zr-Jcn" firstAttribute="centerX" secondItem="zt9-vX-jsp" secondAttribute="centerX" id="VaK-Zg-9eZ"/>
+                            <constraint firstItem="por-zr-Jcn" firstAttribute="trailing" secondItem="zt9-vX-jsp" secondAttribute="trailing" id="c94-nl-bMM"/>
+                            <constraint firstItem="v92-cL-Mg9" firstAttribute="leading" secondItem="48i-E8-Neb" secondAttribute="leading" id="dRA-1u-fui"/>
+                            <constraint firstItem="v92-cL-Mg9" firstAttribute="leading" secondItem="zUD-G9-PGi" secondAttribute="leading" id="hKR-DV-JGu"/>
+                            <constraint firstItem="v92-cL-Mg9" firstAttribute="centerX" secondItem="9Nx-xe-ZTg" secondAttribute="centerX" id="itC-8t-60p"/>
+                            <constraint firstItem="v92-cL-Mg9" firstAttribute="centerX" secondItem="d9l-0u-g04" secondAttribute="centerX" id="j43-x0-aJk"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zUD-G9-PGi" secondAttribute="bottom" constant="-49" id="pNe-pd-jj7"/>
+                            <constraint firstItem="v92-cL-Mg9" firstAttribute="trailing" secondItem="zUD-G9-PGi" secondAttribute="trailing" id="v44-tX-31q"/>
+                            <constraint firstItem="zt9-vX-jsp" firstAttribute="top" secondItem="por-zr-Jcn" secondAttribute="bottom" constant="8" id="vyN-hp-ln7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="48i-E8-Neb"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ProfileBookCollectionView" destination="zUD-G9-PGi" id="JMB-zW-Um0"/>
+                        <outlet property="profileBookFeedLabel" destination="9Nx-xe-ZTg" id="lFZ-2c-IJw"/>
+                        <outlet property="profileImage" destination="por-zr-Jcn" id="hzv-fY-o3c"/>
+                        <outlet property="usernameLabel" destination="zt9-vX-jsp" id="wzE-I0-CSY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8K-OK-eIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="-842"/>
+            <point key="canvasLocation" x="1776.8" y="-842.42878560719646"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -650,16 +715,16 @@
             <point key="canvasLocation" x="1777" y="-129"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="8DB-lK-8pJ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="InterprioLogoOriginal" width="327" height="329"/>
         <image name="Interprio_Login_Logo" width="200" height="200"/>
-        <image name="arrowtriangle.down" catalog="system" width="128" height="124"/>
-        <image name="arrowtriangle.up" catalog="system" width="128" height="124"/>
-        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="arrowtriangle.down" catalog="system" width="64" height="62"/>
+        <image name="arrowtriangle.up" catalog="system" width="64" height="62"/>
+        <image name="camera" catalog="system" width="64" height="48"/>
         <image name="homeButton_tab" width="25" height="25"/>
         <image name="profile_tab" width="25" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8DB-lK-8pJ"/>
+    </inferredMetricsTieBreakers>
 </document>

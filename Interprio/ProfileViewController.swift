@@ -14,19 +14,30 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
 
     @IBOutlet weak var ProfileBookCollectionView: UICollectionView!
+
     var books = [PFObject]()
     var numOfPosts: Int!
-    var user = PFUser()
+
     
     //Object Variables
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var bookLabel: UILabel!
+    @IBOutlet weak var profileBookFeedLabel: UILabel!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+         
+        //Retreving and assigining usernameLabel its appropriate value
+        self.usernameLabel.text = PFUser.current()?.username
         
+        //Setting image for collection view
+        let imageFile = PFUser.current()?["profilePicture"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        self.profileImage.af_setImage(withURL: url)
+        
+
         ProfileBookCollectionView.delegate = self
         ProfileBookCollectionView.dataSource = self
         
@@ -50,34 +61,26 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let query = PFQuery(className: "Books")
         query.includeKeys(["coverImage, title"])
         query.limit = numOfPosts
-        query.whereKey("objectId", equalTo:PFUser.current()!)
+        query.whereKey("createdBy", equalTo:PFUser.current()!)
         query.findObjectsInBackground { (books, error) in
-            if (books != nil ) {
+            if (books != nil && error == nil ) {
                 self.books = books!
                 self.ProfileBookCollectionView.reloadData()
             }
-        }
-    }
-    
-    //Runs query to get Username and Profile picture.
-    /*
-    func getUserInfo() {
-        let query = PFQuery(className: "User")
-        query.whereKey("objectId", equalTo: PFUser.current()!)
-        query.findObjectsInBackground { (object: [PFObject]?, error: Error?) in
-            if object != nil {
-                self.usernameLabel.text = object!["username"] as! String
+            else {
+                print("No books were retrieved")
+                self.profileBookFeedLabel.text  = "No Books Have Been Uploaded"
+                
             }
         }
-        
     }
- */
     
     //Home Button
     @IBAction func backToFeed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    //Collection View Setup
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return books.count
     }
