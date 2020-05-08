@@ -116,6 +116,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func getBookPages(book:PFObject) throws -> [PFObject]   {
         let query = PFQuery(className: "Pages")
         query.whereKey("book", equalTo: book)
+        query.includeKey("createdBy")
         let results = try query.findObjects()
         return results
     }

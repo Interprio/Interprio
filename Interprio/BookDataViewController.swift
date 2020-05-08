@@ -13,12 +13,16 @@ class BookDataViewController: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet weak var pageImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    var displayUsernameText: String?
     var displayText: String?
     var displayImage: UIImage?
     var index: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameLabel.text = displayUsernameText
         displayLabel.text = displayText
         pageImageView.image = displayImage
         // Do any additional setup after loading the view.

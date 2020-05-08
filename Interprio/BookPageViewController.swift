@@ -69,6 +69,8 @@ class BookPageViewController: UIViewController {
         }
         
         dataViewController.index = index
+        let userInfo = pages[index]["createdBy"] as! PFUser
+        dataViewController.displayUsernameText = "Made By: " + userInfo.username!
         dataViewController.displayText = pages[index]["caption"] as! String
         let imageFile = pages[index]["image"] as! PFFileObject
         imageFile.getDataInBackground { (imageData: Data?, error: Error?) in
